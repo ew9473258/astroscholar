@@ -1,4 +1,4 @@
-# Astroscholar
+# AstroScholar
 An AI-powered research app intended for use by psychic professionals for quick retrieval of astrology-related information from historical sources, extracted using an LLM. 
 
 - Allows users to ask questions with a simple and clean interface
