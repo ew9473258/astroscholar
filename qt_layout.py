@@ -84,7 +84,7 @@ class MainWindow(QMainWindow):
         button = QPushButton('Search the Stars')
         button.setFixedWidth(500) # This also sets the default min width of the window at 500 px
         button.setFont(QFont("SansSerif", 10, QFont.Weight.Bold))
-        button.released.connect(self.search_the_stars) # If button is pressed
+        # button.clicked.connect(self.search_the_stars) # Alternative to on_hit 
         self.input_question.returnPressed.connect(self.search_the_stars) # If just enter is pressed
         
         # Glow effect
@@ -97,6 +97,7 @@ class MainWindow(QMainWindow):
         def on_hit():
             glow_button.setBlurRadius(40)
             glow_button.setColor(QColor("#F5F107" )) # FFE27A, F5F107, note: currently set to same colour
+            self.search_the_stars()
 
         button.hitButton = lambda e: on_hit()
         
